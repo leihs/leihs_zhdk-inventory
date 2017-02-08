@@ -1,2 +1,7 @@
 ansible_host: leihs-v4-test.zhdk.ch
 ansible_user: root
+
+ssh_keys_present:
+  - "{{lookup('file', inventory_dir + '/ssh_keys/drtom')}}"
+  - "{{lookup('file', inventory_dir + '/ssh_keys/mfa')}}"
+  - "{{lookup('file', inventory_dir + '/ssh_keys/nimaai')}}"
