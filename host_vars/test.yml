@@ -5,3 +5,5 @@ ssh_keys_present:
   - "{{lookup('file', inventory_dir + '/ssh_keys/drtom')}}"
   - "{{lookup('file', inventory_dir + '/ssh_keys/mfa')}}"
   - "{{lookup('file', inventory_dir + '/ssh_keys/nimaai')}}"
+
+database_dump_restore_file_path: '{{inventory_dir}}/secrets/db_production.pgbin'
