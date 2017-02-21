@@ -1,2 +1,5 @@
+[leihs_gateway]
+leihs-v4
+
 [leihs_server]
-test
+leihs-v4-test
