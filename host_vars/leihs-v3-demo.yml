@@ -1,0 +1,5 @@
+ansible_host: demo.leihs.zhdk.ch
+ansible_user: root
+leihs_v3_root_dir: /home/leihsdemo/demo/current
+leihs_v3_ruby_dir: /home/leihsdemo/.rbenv/versions/2.3.0
+leihs_v3_user: leihsdemo

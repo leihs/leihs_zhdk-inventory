@@ -1,3 +1,5 @@
 ansible_host: leihs.zhdk.ch
-ansible_user: leihs
+ansible_user: root
 leihs_v3_root_dir: /home/leihs/production/current
+leihs_v3_ruby_dir: /home/leihs/.rbenv/versions/2.3.0
+leihs_v3_user: leihs
