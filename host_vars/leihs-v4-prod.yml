@@ -1,6 +1,10 @@
 ansible_host: leihs-v4-prod.zhdk.ch
 ansible_user: root
 
+db_backup_on_deploy: Yes
+db_backup_keep_days: 4
+db_backup_nigthly_enabled: Yes
+
 ssh_keys_present:
   - "{{lookup('file', inventory_dir + '/ssh_keys/drtom')}}"
   - "{{lookup('file', inventory_dir + '/ssh_keys/mfa')}}"
@@ -10,3 +14,4 @@ ssh_keys_present:
 database_dump_restore_file_path: '{{inventory_dir}}/../legacy/tmp/db_production.pgbin'
 
 ci_vim_mode: yes
+
