@@ -10,3 +10,5 @@ ssh_keys_present:
 database_dump_restore_file_path: '{{inventory_dir}}/../legacy/tmp/db_production.pgbin'
 
 ci_vim_mode: yes
+
+settings_external_base_url: "https://test.leihs-v4.zhdk.ch"
