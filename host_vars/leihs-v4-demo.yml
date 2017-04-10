@@ -1,0 +1,14 @@
+ansible_host: leihs-v4-demo.zhdk.ch
+ansible_user: root
+
+ssh_keys_present:
+  - "{{lookup('file', inventory_dir + '/ssh_keys/drtom')}}"
+  - "{{lookup('file', inventory_dir + '/ssh_keys/mfa')}}"
+  - "{{lookup('file', inventory_dir + '/ssh_keys/nimaai')}}"
+  - "{{lookup('file', inventory_dir + '/ssh_keys/zhdk_ci_executor')}}"
+
+database_dump_restore_file_path: '{{inventory_dir}}/../legacy/tmp/db_production.pgbin'
+
+ci_vim_mode: yes
+
+settings_external_base_url: "https://demo.leihs.zhdk.ch"
