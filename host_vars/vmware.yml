@@ -1,0 +1,9 @@
+ansible_host: 192.168.75.128
+ansible_user: root
+
+ssh_keys_present:
+  - "{{lookup('file', inventory_dir + '/ssh_keys/nimaai')}}"
+
+database_dump_restore_file_path: '{{inventory_dir}}/../legacy/tmp/db_production.pgbin'
+
+ci_vim_mode: yes
