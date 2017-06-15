@@ -1,4 +1,4 @@
-ansible_host: leihs-v4-test.zhdk.ch
+ansible_host: zhdk-leihs-demo.ruby.zhdk.ch
 ansible_user: root
 
 ssh_keys_present:
@@ -11,4 +11,4 @@ database_dump_restore_file_path: '{{inventory_dir}}/../legacy/tmp/db_production.
 
 ci_vim_mode: yes
 
-settings_external_base_url: "https://test.leihs-v4.zhdk.ch"
+settings_external_base_url: "https://demo.leihs.zhdk.ch"
