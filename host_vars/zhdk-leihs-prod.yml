@@ -1,4 +1,4 @@
-ansible_host: leihs-v4-prod.zhdk.ch
+ansible_host: zhdk-leihs-prod.ruby.zhdk.ch
 ansible_user: root
 
 leihs_send_mails: Yes
