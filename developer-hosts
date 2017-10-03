@@ -1,0 +1,9 @@
+[leihs_server]
+mfa.ruby.zhdk.ch
+nimaai.ruby.zhdk.ch
+phiku.ruby.zhdk.ch
+tom.ruby.zhdk.ch
+
+
+[all:vars]
+ansible_user=root
