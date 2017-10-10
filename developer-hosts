@@ -7,3 +7,4 @@ tom.ruby.zhdk.ch
 
 [all:vars]
 ansible_user=root
+database_dump_restore_file_path='{{inventory_dir}}/../legacy/tmp/db_production.pgbin'
