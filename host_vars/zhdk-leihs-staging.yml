@@ -9,6 +9,8 @@ ssh_keys_present:
 
 database_dump_restore_file_path: '{{inventory_dir}}/../legacy/tmp/db_production.pgbin'
 
+zhdk_agw_info_file_path: '{{inventory_dir}}/../legacy/secrets/agw_info_prod.rb'
+
 ci_vim_mode: yes
 
 settings_external_base_url: "https://staging.leihs.zhdk.ch"
