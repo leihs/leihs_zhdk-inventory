@@ -1,6 +1,10 @@
 ansible_host: zhdk-leihs-staging.ruby.zhdk.ch
 ansible_user: root
 
+db_backup_nigthly_enabled: Yes
+db_backup_keep_days: 2
+db_backup_on_deploy: Yes
+
 ssh_keys_present:
   - "{{lookup('file', inventory_dir + '/ssh_keys/drtom')}}"
   - "{{lookup('file', inventory_dir + '/ssh_keys/mfa')}}"
