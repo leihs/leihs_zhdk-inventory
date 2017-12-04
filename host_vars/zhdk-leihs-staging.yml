@@ -5,10 +5,6 @@ db_backup_nigthly_enabled: No
 db_backup_on_deploy: No
 db_backup_keep_days: 1
 
-# NOTE: this won't send mails to customers! the server itself
-#       is configured to transparently redirect mails to a dummy mailbox!
-leihs_send_mails: Yes
-
 ssh_keys_present:
   - "{{lookup('file', inventory_dir + '/ssh_keys/drtom')}}"
   - "{{lookup('file', inventory_dir + '/ssh_keys/mfa')}}"

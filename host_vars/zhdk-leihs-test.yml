@@ -1,10 +1,6 @@
 ansible_host: zhdk-leihs-test.ruby.zhdk.ch
 ansible_user: root
 
-# NOTE: this won't send mails to customers! the server itself
-#       is configured to transparently redirect mails to a dummy mailbox!
-leihs_send_mails: Yes
-
 ssh_keys_present:
   - "{{lookup('file', inventory_dir + '/ssh_keys/drtom')}}"
   - "{{lookup('file', inventory_dir + '/ssh_keys/mfa')}}"
