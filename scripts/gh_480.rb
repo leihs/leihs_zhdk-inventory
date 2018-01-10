@@ -20,15 +20,19 @@ query = <<-SQL
   	note = (
       select case
         when items.note is null or items.note = '' then
-          'Name: ' || name
+          name
         else
-          items.note || chr(10) || 'Name: ' || name
+          items.note || chr(10) || name
       end
     )
   where
   	items.id in (select * from fundus_item_ids)
     and items.name is not null
     and items.name <> ''
+    and items.name <> 'no name'
+    and items.name <> 'ohne namen'
+    and items.name <> 'no Name'
+    and items.name <> 'ohne Namen'
 SQL
 
 ActiveRecord::Base.transaction do
