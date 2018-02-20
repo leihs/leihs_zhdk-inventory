@@ -4,9 +4,8 @@ nimaai.ruby.zhdk.ch
 phiku.ruby.zhdk.ch
 tom.ruby.zhdk.ch
 
-
-[all:vars]
-ansible_user=root
-database_dump_restore_file_path='{{inventory_dir}}/../legacy/tmp/db_production.pgbin'
-settings_external_base_url='https://{{ansible_host}}'
-zhdk_agw_info_file_path='{{inventory_dir}}/../legacy/secrets/agw_info_test.rb'
+[developer]
+mfa.ruby.zhdk.ch     ansible_host=mfa.ruby.zhdk.ch
+nimaai.ruby.zhdk.ch  ansible_host=nimaai.ruby.zhdk.ch
+phiku.ruby.zhdk.ch   ansible_host=phiku.ruby.zhdk.ch
+tom.ruby.zhdk.ch     ansible_host=tom.ruby.zhdk.ch
