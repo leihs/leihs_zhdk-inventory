@@ -21,4 +21,6 @@ zhdk_agw_info_file_path: '{{inventory_dir}}/../legacy/secrets/agw_info_prod.rb'
 
 ci_vim_mode: yes
 
-settings_external_base_url: "https://staging.leihs.zhdk.ch"
+settings:
+  - name: external_base_url
+    value: "https://staging.leihs.zhdk.ch"

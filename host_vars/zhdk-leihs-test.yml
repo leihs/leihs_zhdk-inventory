@@ -17,4 +17,6 @@ zhdk_agw_info_file_path: '{{inventory_dir}}/../legacy/secrets/agw_info_test.rb'
 
 ci_vim_mode: yes
 
-settings_external_base_url: "https://test.leihs.zhdk.ch"
+settings:
+  - name: external_base_url
+    value: "https://test.leihs.zhdk.ch"

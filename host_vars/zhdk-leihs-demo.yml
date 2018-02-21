@@ -11,4 +11,6 @@ database_dump_restore_file_path: '{{inventory_dir}}/../legacy/tmp/db_production.
 
 ci_vim_mode: yes
 
-settings_external_base_url: "https://demo.leihs.zhdk.ch"
+settings:
+  - name: external_base_url
+    value: "https://demo.leihs.zhdk.ch"
