@@ -1,11 +1,8 @@
-[leihs_server]
-mfa.ruby.zhdk.ch
-nimaai.ruby.zhdk.ch
-phiku.ruby.zhdk.ch
-tom.ruby.zhdk.ch
+[developers]
+mfa
+nimaai
+phiku
+tom
 
-[developer]
-mfa.ruby.zhdk.ch     ansible_host=mfa.ruby.zhdk.ch
-nimaai.ruby.zhdk.ch  ansible_host=nimaai.ruby.zhdk.ch
-phiku.ruby.zhdk.ch   ansible_host=phiku.ruby.zhdk.ch
-tom.ruby.zhdk.ch     ansible_host=tom.ruby.zhdk.ch
+[leihs_server:children]
+developers

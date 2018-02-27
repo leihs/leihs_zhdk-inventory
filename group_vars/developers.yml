@@ -1,7 +1,3 @@
 ansible_user: root
 database_dump_restore_file_path: '{{inventory_dir}}/../legacy/tmp/db_production.pgbin'
 zhdk_agw_info_file_path: '{{inventory_dir}}/../legacy/secrets/agw_info_test.rb'
-
-settings:
-  - name: external_base_url
-    value: "https://{{ansible_host}}"

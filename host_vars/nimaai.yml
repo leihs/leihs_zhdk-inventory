@@ -1,0 +1,3 @@
+ansible_host: nimaai.ruby.zhdk.ch
+settings_file_path: '{{inventory_dir}}/settings/nimaai.yml'
+ci_vim_mode: yes

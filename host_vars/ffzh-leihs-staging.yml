@@ -11,6 +11,4 @@ database_dump_restore_file_path: '{{inventory_dir}}/../legacy/tmp/db_production.
 
 ci_vim_mode: yes
 
-settings:
-  - name: external_base_url
-    value: "https://ffzh-staging.leihs.zhdk.ch"
+settings_file_path: '{{inventory_dir}}/settings/ffzh-leihs-staging.yml'
