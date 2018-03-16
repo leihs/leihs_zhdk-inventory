@@ -1,2 +1,3 @@
 ansible_host: tom.ruby.zhdk.ch
 settings_file_path: '{{inventory_dir}}/settings/tom.yml'
+shibboleth_sign_in_enabled: Yes
