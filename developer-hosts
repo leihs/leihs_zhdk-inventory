@@ -6,3 +6,6 @@ tom
 
 [leihs_server:children]
 developers
+
+[zhdk_secrets:children]
+developers
