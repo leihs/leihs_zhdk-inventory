@@ -1,3 +1,4 @@
 ansible_host: nimaai.ruby.zhdk.ch
 settings_file_path: '{{inventory_dir}}/settings/nimaai.yml'
+leihs_master_secret: '{{zhdk_dev_master_secret}}'
 ci_vim_mode: yes

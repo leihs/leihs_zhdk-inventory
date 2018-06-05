@@ -1,2 +1,3 @@
 ansible_host: mfa.ruby.zhdk.ch
 settings_file_path: '{{inventory_dir}}/settings/mfa.yml'
+leihs_master_secret: '{{zhdk_dev_master_secret}}'
