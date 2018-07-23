@@ -1,3 +1,4 @@
 ansible_host: mfa.ruby.zhdk.ch
 settings_file_path: '{{inventory_dir}}/settings/mfa.yml'
+shibboleth_sign_in_enabled: Yes
 leihs_master_secret: '{{zhdk_dev_master_secret}}'
