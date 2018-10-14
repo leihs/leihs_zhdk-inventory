@@ -2,3 +2,6 @@ ansible_host: tom.ruby.zhdk.ch
 settings_file_path: '{{inventory_dir}}/settings/tom.yml'
 shibboleth_sign_in_enabled: Yes
 leihs_master_secret: '{{zhdk_dev_master_secret}}'
+
+manipulate_data_reset_all_login_fields: true
+manipulate_data_revoke_all_admins: true
