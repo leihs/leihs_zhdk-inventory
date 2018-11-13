@@ -30,3 +30,14 @@ database_dump_restore_file_path: '{{inventory_dir}}/../legacy/tmp/db_production.
 # db_backup_on_deploy: No
 db_backup_keep_days: 4
 db_backup_nigthly_enabled: Yes
+
+
+# AGW
+agw_auth_external_base_url: http://{{ansible_host}}
+agw_auth_port: 3333
+agw_auth_my_private_key: '{{zhdk_prod_agw_auth_my_private_key}}'
+agw_auth_my_public_key: '{{zhdk_prod_agw_auth_my_public_key}}'
+agw_auth_leihs_public_key: '{{agw_auth_my_public_key}}'
+agw_app_id: '{{zhdk_prod_agw_app_id}}'
+agw_app_secret: '{{zhdk_prod_agw_app_secret}}'
+
