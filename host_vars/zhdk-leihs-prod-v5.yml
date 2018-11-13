@@ -1,0 +1,30 @@
+ansible_host: zhdk-leihs-prod-v5.ruby.zhdk.ch
+ansible_user: root
+
+ssh_keys_present:
+  - "{{lookup('file', inventory_dir + '/ssh_keys/drtom')}}"
+  - "{{lookup('file', inventory_dir + '/ssh_keys/mfa')}}"
+  - "{{lookup('file', inventory_dir + '/ssh_keys/nimaai')}}"
+  - "{{lookup('file', inventory_dir + '/ssh_keys/zhdk_ci_executor')}}"
+
+# THIS NOT THE FIRST TIME
+# database_dump_restore_file_path: '{{inventory_dir}}/../legacy/tmp/db_production.pgbin'
+# db_backup_on_deploy: Yes
+
+# ONLY THE FIRST TIME
+manipulate_data_reset_all_login_fields: true
+manipulate_data_revoke_all_admins: true
+db_backup_on_deploy: No
+
+# LEIHS SETTINGS
+reverse_proxy_custom_config: |
+  ProxyPass /zhdk-agw     http://localhost:3333/zhdk-agw	  nocanon retry=0
+
+leihs_master_secret: '{{zhdk_prod_master_secret}}'
+
+settings_file_path: '{{inventory_dir}}/settings/zhdk-leihs-prod.yml'
+
+leihs_send_mails: Yes
+# db_backup_on_deploy: No
+db_backup_keep_days: 4
+db_backup_nigthly_enabled: Yes
