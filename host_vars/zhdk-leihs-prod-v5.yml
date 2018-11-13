@@ -25,6 +25,8 @@ leihs_master_secret: '{{zhdk_prod_master_secret}}'
 settings_file_path: '{{inventory_dir}}/settings/zhdk-leihs-prod.yml'
 
 leihs_send_mails: Yes
+
+database_dump_restore_file_path: '{{inventory_dir}}/../legacy/tmp/db_production.pgbin'
 # db_backup_on_deploy: No
 db_backup_keep_days: 4
 db_backup_nigthly_enabled: Yes
