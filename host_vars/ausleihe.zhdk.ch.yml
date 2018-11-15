@@ -1,4 +1,6 @@
-ansible_host: zhdk-leihs-prod-v5.ruby.zhdk.ch
+---
+ansible_host: ausleihe.zhdk.ch
+ansible_ssh_host: zhdk-leihs-prod-v5.ruby.zhdk.ch
 ansible_user: root
 
 ssh_keys_present:
@@ -7,25 +9,20 @@ ssh_keys_present:
   - "{{lookup('file', inventory_dir + '/ssh_keys/nimaai')}}"
   - "{{lookup('file', inventory_dir + '/ssh_keys/zhdk_ci_executor')}}"
 
+# LEIHS SETTINGS
+settings_file_path: '{{inventory_dir}}/settings/zhdk-leihs-prod.yml'
+leihs_master_secret: '{{zhdk_prod_master_secret}}'
 
+db_backup_keep_days: 4
+db_backup_nigthly_enabled: Yes
 database_dump_restore_file_path: '{{inventory_dir}}/../legacy/tmp/db_production.pgbin'
 db_backup_on_deploy: Yes
 leihs_send_mails: Yes
 
-# LEIHS SETTINGS
+# AGW
 reverse_proxy_custom_config: |
   ProxyPass /zhdk-agw     http://localhost:3333/zhdk-agw	  nocanon retry=0
 
-leihs_master_secret: '{{zhdk_prod_master_secret}}'
-
-settings_file_path: '{{inventory_dir}}/settings/zhdk-leihs-prod.yml'
-
-database_dump_restore_file_path: '{{inventory_dir}}/../legacy/tmp/db_production.pgbin'
-db_backup_keep_days: 4
-db_backup_nigthly_enabled: Yes
-
-
-# AGW
 agw_auth_external_base_url: http://{{ansible_host}}
 agw_auth_port: 3333
 agw_auth_my_private_key: '{{zhdk_prod_agw_auth_my_private_key}}'
