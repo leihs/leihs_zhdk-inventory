@@ -1,3 +1,6 @@
 [leihs_server]
 zhdk-leihs-staging
 ffzh-leihs-staging
+
+[zhdk_secrets]
+zhdk-leihs-staging

@@ -17,8 +17,19 @@ ssh_keys_present:
 
 database_dump_restore_file_path: '{{inventory_dir}}/../legacy/tmp/db_production.pgbin'
 
-zhdk_agw_info_file_path: '{{inventory_dir}}/../legacy/secrets/agw_info_prod.rb'
-
 ci_vim_mode: yes
 
 settings_file_path: '{{inventory_dir}}/settings/zhdk-leihs-staging.yml'
+
+# AGW
+
+reverse_proxy_custom_config: |
+  ProxyPass /zhdk-agw     http://localhost:3333/zhdk-agw	  nocanon retry=0
+
+agw_auth_external_base_url: http://staging.leihs.zhdk.ch
+agw_auth_port: 3333
+agw_auth_my_private_key: '{{zhdk_staging_agw_auth_my_private_key}}'
+agw_auth_my_public_key: '{{zhdk_staging_agw_auth_my_public_key}}'
+agw_auth_leihs_public_key: '{{agw_auth_my_public_key}}'
+agw_app_id: '{{zhdk_staging_agw_app_id}}'
+agw_app_secret: '{{zhdk_staging_agw_app_secret}}'

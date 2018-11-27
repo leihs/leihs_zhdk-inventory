@@ -12,10 +12,6 @@ database_dump_restore_file_path: '{{inventory_dir}}/../legacy/tmp/db_production.
 db_backup_on_deploy: Yes
 leihs_send_mails: Yes
 
-# LEIHS SETTINGS
-reverse_proxy_custom_config: |
-  ProxyPass /zhdk-agw     http://localhost:3333/zhdk-agw	  nocanon retry=0
-
 leihs_master_secret: '{{zhdk_prod_master_secret}}'
 
 settings_file_path: '{{inventory_dir}}/settings/zhdk-leihs-prod.yml'
@@ -26,7 +22,11 @@ db_backup_nigthly_enabled: Yes
 
 
 # AGW
-agw_auth_external_base_url: http://{{ansible_host}}
+ 
+reverse_proxy_custom_config: |
+  ProxyPass /zhdk-agw     http://localhost:3333/zhdk-agw	  nocanon retry=0
+
+agw_auth_external_base_url: https://ausleihe.zhdk.ch
 agw_auth_port: 3333
 agw_auth_my_private_key: '{{zhdk_prod_agw_auth_my_private_key}}'
 agw_auth_my_public_key: '{{zhdk_prod_agw_auth_my_public_key}}'
