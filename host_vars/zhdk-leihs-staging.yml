@@ -26,7 +26,7 @@ settings_file_path: '{{inventory_dir}}/settings/zhdk-leihs-staging.yml'
 reverse_proxy_custom_config: |
   ProxyPass /zhdk-agw     http://localhost:3333/zhdk-agw	  nocanon retry=0
 
-agw_auth_external_base_url: http://staging.leihs.zhdk.ch
+agw_auth_external_base_url: https://staging.leihs.zhdk.ch
 agw_auth_port: 3333
 agw_auth_my_private_key: '{{zhdk_staging_agw_auth_my_private_key}}'
 agw_auth_my_public_key: '{{zhdk_staging_agw_auth_my_public_key}}'
