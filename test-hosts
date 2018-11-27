@@ -3,3 +3,6 @@
 
 [leihs_server]
 zhdk-leihs-test
+
+[zhdk_secrets]
+zhdk-leihs-test
