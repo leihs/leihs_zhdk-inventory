@@ -1,5 +1,8 @@
 [leihs_server]
 zhdk-leihs-prod-v5
 
-[zhdk_secrets]
-zhdk-leihs-prod-v5
+[zhdk:children]
+leihs_server
+
+[zhdk_secrets:children]
+leihs_server

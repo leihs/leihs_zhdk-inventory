@@ -1,8 +1,0 @@
-#[leihs_gateway]
-#leihs-v4
-
-#[leihs_v3_server]
-#leihs-v3-prod
-
-[leihs_server]
-zhdk-leihs-prod
