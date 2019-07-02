@@ -1,8 +1,11 @@
 [leihs_server]
 zhdk-leihs-test
+v51-test
 
 [zhdk]
 zhdk-leihs-test
+v51-test
 
 [zhdk_secrets]
 zhdk-leihs-test
+v51-test
