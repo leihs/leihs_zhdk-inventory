@@ -1,1 +1,10 @@
-external_base_url: "https://ffzh-staging.leihs.zhdk.ch"
+external_base_url: https://ffzh-staging.leihs.zhdk.ch
+smtp_address: localhost
+smtp_port: 25
+smtp_domain: ausleihe.zhdk.ch
+smtp_username: ""
+smtp_password: ""
+smtp_enable_starttls_auto: f
+smtp_openssl_verify_mode: none
+smtp_sender_address: ""
+smtp_default_from_address: noreply@example.com
