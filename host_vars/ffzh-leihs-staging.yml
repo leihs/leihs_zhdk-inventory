@@ -12,3 +12,7 @@ database_dump_restore_file_path: '{{inventory_dir}}/../legacy/tmp/db_production.
 ci_vim_mode: yes
 
 settings_file_path: '{{inventory_dir}}/settings/ffzh-leihs-staging.yml'
+
+# NOTE: this won't send mails to customers! the server itself
+#       is configured to transparently redirect mails to a dummy mailbox!
+leihs_send_mails: Yes
