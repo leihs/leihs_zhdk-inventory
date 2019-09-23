@@ -7,4 +7,4 @@ smtp_password: ""
 smtp_enable_starttls_auto: f
 smtp_openssl_verify_mode: none
 smtp_sender_address: ""
-smtp_default_from_address: noreply@example.com
+smtp_default_from_address: noreply@zhdk.ch

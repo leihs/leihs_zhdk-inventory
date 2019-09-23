@@ -1,1 +1,2 @@
 external_base_url: "https://leihs.zhdk.ch"
+smtp_default_from_address: "noreply@zhdk.ch"
