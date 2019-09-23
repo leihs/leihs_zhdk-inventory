@@ -1,1 +1,5 @@
-external_base_url: "https://demo.leihs.zhdk.ch"
+external_base_url: https://demo.leihs.zhdk.ch
+mail_delivery_method: test
+# this makes the smtp server to reject the email
+default_email: noreply@example.com
+smtp_default_from_address: noreply@example.ch
