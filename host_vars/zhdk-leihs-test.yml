@@ -19,6 +19,7 @@ ci_vim_mode: yes
 
 settings_file_path: '{{inventory_dir}}/settings/zhdk-leihs-test.yml'
 
+LEIHS_DEPLOY_NEW_BORROW_APP: yes
 
 # AGW
 
