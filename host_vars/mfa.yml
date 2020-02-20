@@ -1,2 +1,16 @@
 ansible_host: mfa.ruby.zhdk.ch
 settings_file_path: '{{inventory_dir}}/settings/mfa.yml'
+
+
+LEIHS_DEPLOY_NEW_BORROW_APP: yes
+
+# AGW
+reverse_proxy_custom_config: |
+  ProxyPass /zhdk-agw     http://localhost:3333/zhdk-agw	  nocanon retry=0
+agw_auth_external_base_url: https://mfa.ruby.zhdk.ch
+agw_auth_port: 3333
+agw_auth_private_key: '{{auth_system_master_private_key}}'
+agw_auth_public_key: '{{auth_system_master_public_key}}'
+agw_auth_leihs_public_key: '{{auth_system_master_public_key}}'
+agw_app_id: '{{zhdk_staging_agw_app_id}}'
+agw_app_secret: '{{zhdk_staging_agw_app_secret}}'
