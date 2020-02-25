@@ -7,5 +7,10 @@ require('pry')
 
 AccessRight
   .where(inventory_pool_id: "b534b07c-d9bf-4572-840c-0a630b8cd8ed", role: "customer")
-  .joins("INNER JOIN reservations ON reservations.user_id = access_rights.user_id AND reservations.status != 'signed'")
+  .joins(<<~SQL)
+    INNER JOIN reservations
+    ON reservations.user_id = access_rights.user_id
+    AND reservations.inventory_pool_id = access_rights.inventory_pool_id
+    AND reservations.status != 'signed'
+  SQL
   .delete_all
