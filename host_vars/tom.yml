@@ -9,7 +9,7 @@ manipulate_data_revoke_all_admins: true
 # AGW
 reverse_proxy_custom_config: |
   ProxyPass /zhdk-agw     http://localhost:3333/zhdk-agw	  nocanon retry=0
-agw_auth_external_base_url: https://tom.ruby.zhdk.ch
+agw_auth_external_base_url: https://tom.leihs.zhdk.ch
 agw_auth_port: 3333
 agw_auth_private_key: '{{auth_system_master_private_key}}'
 agw_auth_public_key: '{{auth_system_master_public_key}}'
