@@ -1,3 +1,5 @@
+leihs_external_hostname: "ffzh-staging.leihs.zhdk.ch"
+
 ansible_host: ffzh-leihs-staging.ruby.zhdk.ch
 ansible_user: root
 

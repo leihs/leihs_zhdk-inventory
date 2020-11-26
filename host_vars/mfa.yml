@@ -1,3 +1,5 @@
+leihs_external_hostname: mfa.ruby.zhdk.ch
+
 ansible_host: mfa.ruby.zhdk.ch
 settings_file_path: '{{inventory_dir}}/settings/mfa.yml'
 
