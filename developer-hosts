@@ -1,7 +1,6 @@
 [developers]
 mfa
 nimaai
-phiku
 tom
 
 [leihs_server:children]

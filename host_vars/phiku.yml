@@ -1,2 +1,0 @@
-ansible_host: phiku.ruby.zhdk.ch
-settings_file_path: '{{inventory_dir}}/settings/phiku.yml'
