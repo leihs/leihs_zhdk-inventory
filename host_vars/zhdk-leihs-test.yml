@@ -23,6 +23,10 @@ settings_file_path: '{{inventory_dir}}/settings/zhdk-leihs-test.yml'
 
 LEIHS_DEPLOY_NEW_BORROW_APP: yes
 
+maintenance_page_heading: "⚠️ Leihs TEST ⚠️"
+maintenance_page_body_paragraphs_html: ["development deploy is running"]
+maintenance_page_status_page_url: "https://ci.zhdk.ch/"
+
 # AGW
 
 reverse_proxy_custom_config: |

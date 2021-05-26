@@ -2,3 +2,7 @@ ansible_user: root
 database_dump_restore_file_path: '{{inventory_dir}}/../legacy/tmp/db_production.pgbin'
 zhdk_agw_info_file_path: '{{inventory_dir}}/../legacy/secrets/agw_info_test.rb'
 #ansible_ssh_common_args: '-o ProxyCommand="ssh -W %h:%p -q root@ci.zhdk.ch"'
+
+maintenance_page_heading: "⚠️ Leihs DEV ⚠️"
+maintenance_page_body_paragraphs_html: ["development deploy is running"]
+maintenance_page_status_page_url: "https://ci.zhdk.ch/"
