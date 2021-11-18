@@ -1,0 +1,48 @@
+leihs_external_hostname: next.leihs.zhdk.ch
+
+ansible_host: zhdk-leihs-next.ruby.zhdk.ch
+ansible_user: root
+
+# needed for Debian 11 bullseye
+ansible_python_interpreter: /usr/bin/python3
+
+db_backup_nigthly_enabled: No
+db_backup_on_deploy: No
+db_backup_keep_days: 1
+
+# TODO: setup mailing like staging or decide to leave disabled.
+# # NOTE: this won't send mails to customers! the server itself
+# #       is configured to transparently redirect mails to a dummy mailbox!
+# leihs_send_mails: Yes
+leihs_send_mails: No
+
+ssh_keys_present:
+  - "{{lookup('file', inventory_dir + '/ssh_keys/drtom')}}"
+  - "{{lookup('file', inventory_dir + '/ssh_keys/mfa')}}"
+  - "{{lookup('file', inventory_dir + '/ssh_keys/nimaai')}}"
+  - "{{lookup('file', inventory_dir + '/ssh_keys/zhdk_ci_executor')}}"
+
+database_dump_restore_file_path: "{{inventory_dir}}/../legacy/tmp/db_production.pgbin"
+
+ci_vim_mode: yes
+
+# settings_file_path: "{{inventory_dir}}/settings/zhdk-leihs-next.yml"
+
+LEIHS_DEPLOY_NEW_BORROW_APP: yes
+
+maintenance_page_heading: "⚠️ Leihs NEXT ⚠️"
+maintenance_page_body_paragraphs_html: ["deploy is running"]
+maintenance_page_status_page_url: "https://ci.zhdk.ch/"
+
+# AGW
+
+reverse_proxy_custom_config: |
+  ProxyPass /zhdk-agw     http://localhost:3333/zhdk-agw	  nocanon retry=0
+
+agw_auth_external_base_url: https://next.leihs.zhdk.ch
+agw_auth_port: 3333
+agw_auth_private_key: "{{auth_system_master_private_key}}"
+agw_auth_public_key: "{{auth_system_master_public_key}}"
+agw_auth_leihs_public_key: "{{auth_system_master_public_key}}"
+agw_app_id: "{{zhdk_staging_agw_app_id}}"
+agw_app_secret: "{{zhdk_staging_agw_app_secret}}"
