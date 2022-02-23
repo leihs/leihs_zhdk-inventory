@@ -2,6 +2,7 @@ leihs_external_hostname: staging.leihs.zhdk.ch
 
 ansible_host: zhdk-leihs-staging.ruby.zhdk.ch
 ansible_user: root
+ansible_python_interpreter: /usr/bin/python3
 
 db_backup_nigthly_enabled: No
 db_backup_on_deploy: No
