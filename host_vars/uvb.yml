@@ -1,10 +1,20 @@
-leihs_external_hostname: uvb.ruby.zhdk.ch
+leihs_external_hostname: uvb.dev.leihs.app
 
 ansible_host: uvb.ruby.zhdk.ch
 settings_file_path: '{{inventory_dir}}/settings/uvb.yml'
 
-
 LEIHS_DEPLOY_NEW_BORROW_APP: yes
+
+leihs_virtual_hosts:
+  - hostname: 'localhost'
+    ip: 'localhost'
+    logfile_infix: 'localhost'
+    force_redirect_to_https: no
+  - hostname: '{{leihs_external_hostname}}'
+    ip: '*'
+    ssl_certificate_file: '/etc/letsencrypt/live/{{leihs_external_hostname}}/fullchain.pem'
+    ssl_certificate_key_file: '/etc/letsencrypt/live/{{leihs_external_hostname}}/privkey.pem'
+    force_redirect_to_https: yes
 
 # AGW
 reverse_proxy_custom_config: |
