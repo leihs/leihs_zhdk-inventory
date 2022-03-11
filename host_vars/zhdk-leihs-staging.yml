@@ -22,8 +22,6 @@ database_dump_restore_file_path: '{{inventory_dir}}/../legacy/tmp/db_production.
 
 ci_vim_mode: yes
 
-settings_file_path: '{{inventory_dir}}/settings/zhdk-leihs-staging.yml'
-
 LEIHS_DEPLOY_NEW_BORROW_APP: yes
 
 maintenance_page_heading: "⚠️ Leihs STAGING ⚠️"

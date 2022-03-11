@@ -1,7 +1,6 @@
 leihs_external_hostname: nimaai.dev.leihs.app
 
 ansible_host: nimaai.ruby.zhdk.ch
-settings_file_path: '{{inventory_dir}}/settings/nimaai.yml'
 ci_vim_mode: yes
 
 LEIHS_DEPLOY_NEW_BORROW_APP: yes

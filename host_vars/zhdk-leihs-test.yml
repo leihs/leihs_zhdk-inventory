@@ -19,8 +19,6 @@ zhdk_agw_info_file_path: '{{inventory_dir}}/../legacy/secrets/agw_info_test.rb'
 
 ci_vim_mode: yes
 
-settings_file_path: '{{inventory_dir}}/settings/zhdk-leihs-test.yml'
-
 LEIHS_DEPLOY_NEW_BORROW_APP: yes
 
 maintenance_page_heading: "⚠️ Leihs TEST ⚠️"

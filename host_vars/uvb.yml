@@ -1,7 +1,6 @@
 leihs_external_hostname: uvb.dev.leihs.app
 
 ansible_host: uvb.ruby.zhdk.ch
-settings_file_path: '{{inventory_dir}}/settings/uvb.yml'
 
 LEIHS_DEPLOY_NEW_BORROW_APP: yes
 
