@@ -2,6 +2,8 @@ leihs_external_hostname: mfa.dev.leihs.app
 
 ansible_host: mfa.ruby.zhdk.ch
 
+ruby_use_jemalloc: yes
+
 LEIHS_DEPLOY_NEW_BORROW_APP: yes
 
 leihs_virtual_hosts:
