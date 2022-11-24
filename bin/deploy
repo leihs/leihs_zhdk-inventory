@@ -1,8 +1,10 @@
-#!/bin/sh -exu
+#!/usr/bin/env bash
+
+set -exu
 
 INVENTORY_DIR="$(cd -- "$(dirname "${BASH_SOURCE}")" ; cd .. > /dev/null 2>&1 && pwd -P)"
-HOSTS_FILE=${INVENTORY_DIR}/test-hosts
-LEIHS_DEPLOY_DIR=${INVENTORY_DIR}/leihs/deploy
+# HOSTS_FILE=${INVENTORY_DIR}/test-hosts
+LEIHS_DEPLOY_DIR=${INVENTORY_DIR}/../deploy
 
 LOCAL_CACHE_DIR_RELATIVE="${LOCAL_CACHE_DIR:-"../tmp/build_cache/"}"
 export LOCAL_CACHE_DIR="$(cd -- "$(dirname "${BASH_SOURCE}")" && mkdir -p "$LOCAL_CACHE_DIR_RELATIVE" && cd "$LOCAL_CACHE_DIR_RELATIVE" && pwd -P)"
@@ -12,14 +14,14 @@ export LOCAL_CACHE_DIR
 git crypt unlock || true
 
 echo "First trying if builds/caches are ok…"
-${INVENTORY_DIR}/leihs/deploy/bin/ansible-playbook \
+${INVENTORY_DIR}/../deploy/bin/ansible-playbook \
   -i $HOSTS_FILE \
   $LEIHS_DEPLOY_DIR/build_only_play.yml "$@"
 
 echo "Build OK, running deploy now!"
 
-${INVENTORY_DIR}/leihs/deploy/bin/ansible-playbook \
+${INVENTORY_DIR}/../deploy/bin/ansible-playbook \
   -i ${HOSTS_FILE} \
-  ${INVENTORY_DIR}/leihs/deploy/deploy_play.yml "$@"
+  ${INVENTORY_DIR}/../deploy/deploy_play.yml "$@"
 
 # vi: ft=sh
