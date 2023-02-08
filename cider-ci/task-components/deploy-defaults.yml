@@ -16,11 +16,7 @@ context:
           include_match: ^.*$
 
       traits:
-        Docker Engine: true
-        asdf-nodejs: true
-        asdf-ruby: true
-        git-crypt: true
-        python3: true
+        asdf: true
         zhdk-leihs-deploy: true
 
       max_trials: 1
@@ -37,24 +33,32 @@ context:
             cd ${INVENTORY_DIR}
             git crypt unlock
 
-        install-ruby:
+        pre-install-ruby:
           exclusive_executor_resource: asdf-ruby
           timeout: 20 Minutes
           body: |
             #!/usr/bin/env bash
-            set -x
-            echo "$TMPDIR"
-            echo "$LOCAL_CACHE_DIR"
-            set -eu
-            asdf install ruby
+            set -euo pipefail
+            cd $DEPLOY_DIR 
+            ./bin/env/ruby-setup
 
-        install-nodejs:
+        pre-install-nodejs:
           exclusive_executor_resource: asdf-nodejs
           timeout: 20 Minutes
           body: |
             #!/usr/bin/env bash
-            set -eu
-            asdf install nodejs
+            set -euo pipefail
+            cd $DEPLOY_DIR 
+            ./bin/env/nodejs-setup
+
+        pre-install-python:
+          exclusive_executor_resource: asdf-python
+          timeout: 20 Minutes
+          body: |
+            #!/usr/bin/env bash
+            set -euo pipefail
+            cd $DEPLOY_DIR 
+            ./bin/env/python-setup
 
         deploy:
           timeout: 40 minutes
@@ -62,10 +66,12 @@ context:
             unlock_passed:
               script_key: unlock
               states: [passed]
+            python-installed:
+              script_key: pre-install-python
             ruby-installed:
-              script_key: install-ruby
+              script_key: pre-install-ruby
             nodejs-installed:
-              script_key: install-nodejs
+              script_key: pre-install-nodejs
 
         attach-server-log:
           ignore_state: yes

@@ -3,7 +3,12 @@ environment_variables:
 
 scripts:
   restore-dump:
-    timeout: 30 Minutes
+    start_when:
+      python is pre installed:
+        script_key: 'pre-install-python'
+      working tree is unlocked: 
+        script_key: 'unlock'
+    timeout: 45 Minutes
     body: |
       set -eux
       cd deploy
