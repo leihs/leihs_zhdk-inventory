@@ -26,8 +26,6 @@ database_dump_restore_file_path: "{{inventory_dir}}/../legacy/tmp/db_production.
 
 ci_vim_mode: yes
 
-LEIHS_DEPLOY_NEW_BORROW_APP: yes
-
 maintenance_page_heading: "⚠️ Leihs NEXT ⚠️"
 maintenance_page_body_paragraphs_html: ["deploy is running"]
 maintenance_page_status_page_url: "https://ci.zhdk.ch/"

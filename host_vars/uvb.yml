@@ -2,8 +2,6 @@ leihs_external_hostname: uvb.ruby.zhdk.ch
 
 ansible_host: uvb.ruby.zhdk.ch
 
-LEIHS_DEPLOY_NEW_BORROW_APP: yes
-
 # AGW
 reverse_proxy_custom_config: |
   ProxyPass /zhdk-agw     http://localhost:3333/zhdk-agw	  nocanon retry=0
