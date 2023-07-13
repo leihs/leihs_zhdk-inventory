@@ -61,7 +61,7 @@ context:
             ./bin/env/python-setup
 
         deploy:
-          timeout: 40 minutes
+          timeout: 5 hours
           start_when:
             unlock_passed:
               script_key: unlock
