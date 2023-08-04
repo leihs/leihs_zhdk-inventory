@@ -8,7 +8,7 @@ scripts:
         script_key: 'pre-install-python'
       working tree is unlocked: 
         script_key: 'unlock'
-    timeout: 45 Minutes
+    timeout: 2 hours
     body: |
       set -eux
       cd deploy
