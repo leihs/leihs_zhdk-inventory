@@ -7,11 +7,7 @@ ansible_user: root
 #       is configured to transparently redirect mails to a dummy mailbox!
 leihs_send_mails: Yes
 
-ssh_keys_present:
-  - "{{lookup('file', inventory_dir + '/ssh_keys/drtom')}}"
-  - "{{lookup('file', inventory_dir + '/ssh_keys/mfa')}}"
-  - "{{lookup('file', inventory_dir + '/ssh_keys/nimaai')}}"
-  - "{{lookup('file', inventory_dir + '/ssh_keys/zhdk_ci_executor')}}"
+ssh_keys_present: []
 
 database_dump_restore_file_path: '{{inventory_dir}}/../legacy/tmp/db_production.pgbin'
 

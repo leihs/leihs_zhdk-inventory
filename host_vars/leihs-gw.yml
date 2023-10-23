@@ -1,10 +1,7 @@
 ansible_host: leihs-gw.zhdk.ch
 ansible_user: root
 
-ssh_keys_present:
-  - "{{lookup('file', inventory_dir + '/ssh_keys/drtom')}}"
-  - "{{lookup('file', inventory_dir + '/ssh_keys/mfa')}}"
-  - "{{lookup('file', inventory_dir + '/ssh_keys/nimaai')}}"
+ssh_keys_present: []
 
 ci_vim_mode: yes
 
