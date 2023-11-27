@@ -22,6 +22,7 @@ maintenance_page_status_page_url: "https://ci.zhdk.ch/"
 # AGW
 
 reverse_proxy_custom_config: |
+  ProxyPass /authenticators/ms-open-id/zhdkaad http://localhost:3434/authenticators/ms-open-id/zhdkaad nocanon retry=0
   ProxyPass /zhdk-agw     http://localhost:3333/zhdk-agw	  nocanon retry=0
 
 agw_auth_external_base_url: https://test.leihs.zhdk.ch

@@ -1,0 +1,22 @@
+port: '3434'
+external_base_url: 'https://{{leihs_external_hostname}}'
+name: 'zhdkaad'
+
+private_key: |
+{{ zhdk_aad_auth_system_private_key | indent(2, True)}}
+
+public_key: |
+  -----BEGIN PUBLIC KEY-----
+  MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIANfIIzO7kT3MewgDZshUTqy3DSb
+  L4B/+3sZZzI1XfiseDQgvHhL6T5BFzxk/VFEzU4leUUlOBRZv+hdabqp2g==
+  -----END PUBLIC KEY-----
+
+leihs_public_key: |
+  -----BEGIN PUBLIC KEY-----
+  MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEDvC5Sab03HcjJ7MWJLbXVyE77gx+
+  nopD1pIUDwJtqxa7nnLPbGZbbnFWCyWABydQIC+hwCjeflheiQBiyjWIrw==
+  -----END PUBLIC KEY-----
+
+tenant: eff1ebf7-73e5-4e3d-befd-52d69e759214
+client_id: 6a35749b-1bfc-4765-95e8-336e49441390
+email_attribute: 'email'
