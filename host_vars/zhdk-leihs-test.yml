@@ -32,3 +32,5 @@ agw_auth_public_key: '{{auth_system_master_public_key}}'
 agw_auth_leihs_public_key: '{{auth_system_master_public_key}}'
 agw_app_id: '{{zhdk_staging_agw_app_id}}'
 agw_app_secret: '{{zhdk_staging_agw_app_secret}}'
+
+zhdkaad_client_id: b6d7c311-51bf-4acc-b676-ad33c41c1612
