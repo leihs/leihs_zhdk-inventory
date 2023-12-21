@@ -15,3 +15,6 @@ jobs:
       tasks:
         deploy:
           include: cider-ci/task-components/zhdk-test-deploy.yml
+          scripts:
+            restore-dump:
+              body: echo SKIP

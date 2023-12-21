@@ -2,7 +2,7 @@ jobs:
   ###
 
   MFA-prod:
-    name: ⚒ Dev-Deploy + restore PROD-DATA! to mfa.ruby.zhdk.ch
+    name: RESTORE PROD DATA and deploy to mfa.ruby.zhdk.ch
     include: cider-ci/task-components/zhdk-dev-deploy-with-prod-data.yml
     context:
       task_defaults:
@@ -11,7 +11,7 @@ jobs:
           DEPLOY_TARGET_INVENTORY: "developer-hosts --limit mfa"
 
   MFA-blank:
-    name: ⚒ Dev-Deploy to mfa.ruby.zhdk.ch
+    name: Deploy to mfa.ruby.zhdk.ch
     include: cider-ci/task-components/zhdk-dev-deploy-blank.yml
     context:
       task_defaults:
@@ -22,7 +22,7 @@ jobs:
   ###
 
   NIMAAI-prod:
-    name: ⚒ Dev-Deploy + restore PROD-DATA! to nimaai.ruby.zhdk.ch
+    name: RESTORE PROD DATA and deploy to nimaai.ruby.zhdk.ch
     include: cider-ci/task-components/zhdk-dev-deploy-with-prod-data.yml
     context:
       task_defaults:
@@ -31,7 +31,7 @@ jobs:
           DEPLOY_TARGET_INVENTORY: "developer-hosts --limit nimaai"
 
   NIMAAI-blank:
-    name: ⚒ Dev-Deploy to nimaai.ruby.zhdk.ch
+    name: Deploy to nimaai.ruby.zhdk.ch
     include: cider-ci/task-components/zhdk-dev-deploy-blank.yml
     context:
       task_defaults:
@@ -42,7 +42,7 @@ jobs:
   ###
 
   TOM-prod:
-    name: ⚒ Dev-Deploy + restore PROD-DATA! to tom.ruby.zhdk.ch
+    name: RESTORE PROD DATA and deploy to tom.ruby.zhdk.ch
     include: cider-ci/task-components/zhdk-dev-deploy-with-prod-data.yml
     context:
       task_defaults:
@@ -51,7 +51,7 @@ jobs:
           DEPLOY_TARGET_INVENTORY: "developer-hosts --limit tom"
 
   TOM-blank:
-    name: ⚒ Dev-Deploy to tom.ruby.zhdk.ch
+    name: Deploy to tom.ruby.zhdk.ch
     include: cider-ci/task-components/zhdk-dev-deploy-blank.yml
     context:
       task_defaults:
@@ -62,7 +62,7 @@ jobs:
   ###
 
   UVB-prod:
-    name: ⚒ Dev-Deploy + restore PROD-DATA! to uvb.ruby.zhdk.ch
+    name: RESTORE PROD DATA and deploy to uvb.ruby.zhdk.ch
     include: cider-ci/task-components/zhdk-dev-deploy-with-prod-data.yml
     context:
       task_defaults:
@@ -71,7 +71,7 @@ jobs:
           DEPLOY_TARGET_INVENTORY: "developer-hosts --limit uvb"
 
   UVB-blank:
-    name: ⚒ Dev-Deploy to uvb.ruby.zhdk.ch
+    name: Deploy to uvb.ruby.zhdk.ch
     include: cider-ci/task-components/zhdk-dev-deploy-blank.yml
     context:
       task_defaults:

@@ -1,7 +1,7 @@
 jobs:
   deploy-to-next:
     include: cider-ci/task-components/deploy-defaults.yml
-    name: "🚀 Deploy to zhdk-leihs-next.ruby.zhdk.ch (coordinate with Nadja before doing this!)"
+    name: "Deploy to zhdk-leihs-next.ruby.zhdk.ch (coordinate with Nadja before doing this!)"
 
     context:
       task_defaults:
@@ -20,7 +20,7 @@ jobs:
 
   deploy-and-restore-prod-data-to-next:
     include: cider-ci/task-components/deploy-defaults.yml
-    name: "🔂 RESTORE PROD DATA And Deploy to zhdk-leihs-next.ruby.zhdk.ch (coordinate with Nadja before doing this!)"
+    name: "RESTORE PROD DATA and deploy to zhdk-leihs-next.ruby.zhdk.ch (coordinate with Nadja before doing this!)"
 
     context:
       task_defaults:

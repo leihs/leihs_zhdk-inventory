@@ -1,7 +1,7 @@
 jobs:
-  deploy-to-staging-no-restore:
+  deploy-to-staging-with-restore:
     include: cider-ci/task-components/deploy-defaults.yml
-    name: Deploy to zhdk-leihs-staging.ruby.zhdk.ch ***WITHOUT DB-RESTORE***
+    name: RESTORE PROD DATA and deploy to zhdk-leihs-staging.ruby.zhdk.ch
 
     context:
       task_defaults:
@@ -15,6 +15,3 @@ jobs:
       tasks:
         deploy:
           include: cider-ci/task-components/zhdk-test-deploy.yml
-          scripts:
-            restore-dump:
-              body: echo SKIP
