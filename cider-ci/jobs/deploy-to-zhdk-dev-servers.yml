@@ -1,26 +1,6 @@
 jobs:
   ###
 
-  MFA-prod:
-    name: RESTORE PROD DATA and deploy to mfa.ruby.zhdk.ch
-    include: cider-ci/task-components/zhdk-dev-deploy-with-prod-data.yml
-    context:
-      task_defaults:
-        exclusive_global_resources: { mfa.ruby.zhdk.ch: true }
-        environment_variables:
-          DEPLOY_TARGET_INVENTORY: "developer-hosts --limit mfa"
-
-  MFA-blank:
-    name: Deploy to mfa.ruby.zhdk.ch
-    include: cider-ci/task-components/zhdk-dev-deploy-blank.yml
-    context:
-      task_defaults:
-        exclusive_global_resources: { mfa.ruby.zhdk.ch: true }
-        environment_variables:
-          DEPLOY_TARGET_INVENTORY: "developer-hosts --limit mfa"
-
-  ###
-
   NIMAAI-prod:
     name: RESTORE PROD DATA and deploy to nimaai.ruby.zhdk.ch
     include: cider-ci/task-components/zhdk-dev-deploy-with-prod-data.yml
@@ -78,3 +58,43 @@ jobs:
         exclusive_global_resources: { uvb.ruby.zhdk.ch: true }
         environment_variables:
           DEPLOY_TARGET_INVENTORY: "developer-hosts --limit uvb"
+            
+  ###
+
+  JAN-prod:
+    name: RESTORE PROD DATA and deploy to jan.ruby.zhdk.ch
+    include: cider-ci/task-components/zhdk-dev-deploy-with-prod-data.yml
+    context:
+      task_defaults:
+        exclusive_global_resources: { jan.ruby.zhdk.ch: true }
+        environment_variables:
+          DEPLOY_TARGET_INVENTORY: "developer-hosts --limit jan"
+
+  JAN-blank:
+    name: Deploy to jan.ruby.zhdk.ch
+    include: cider-ci/task-components/zhdk-dev-deploy-blank.yml
+    context:
+      task_defaults:
+        exclusive_global_resources: { jan.ruby.zhdk.ch: true }
+        environment_variables:
+          DEPLOY_TARGET_INVENTORY: "developer-hosts --limit jan"
+            
+  ###
+
+  MANUEL-prod:
+    name: RESTORE PROD DATA and deploy to manuel.ruby.zhdk.ch
+    include: cider-ci/task-components/zhdk-dev-deploy-with-prod-data.yml
+    context:
+      task_defaults:
+        exclusive_global_resources: { manuel.ruby.zhdk.ch: true }
+        environment_variables:
+          DEPLOY_TARGET_INVENTORY: "developer-hosts --limit manuel"
+
+  MANUEL-blank:
+    name: Deploy to manuel.ruby.zhdk.ch
+    include: cider-ci/task-components/zhdk-dev-deploy-blank.yml
+    context:
+      task_defaults:
+        exclusive_global_resources: { manuel.ruby.zhdk.ch: true }
+        environment_variables:
+          DEPLOY_TARGET_INVENTORY: "developer-hosts --limit manuel"

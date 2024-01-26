@@ -1,5 +1,6 @@
 [developers]
-mfa
+jan
+manuel
 nimaai
 tom
 uvb
@@ -12,4 +13,3 @@ developers
 
 [zhdk_secrets:children]
 developers
-
