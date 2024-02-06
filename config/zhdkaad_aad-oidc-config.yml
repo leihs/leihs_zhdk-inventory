@@ -1,11 +1,13 @@
 port: '3434'
 
-# SSO doesn't work if UPN is not eq email; set this to true
+# doesn't work if UPN is not eq email; set this to true
 # once the ZHdK switched to email = UPN
 send_login_hint: false
 
 external_base_url: 'https://{{leihs_external_hostname}}'
 name: 'zhdkaad'
+leihs_auth_id: 'zhdkaad'
+
 
 private_key: |
 {{ zhdk_aad_auth_system_private_key | indent(2, True)}}
