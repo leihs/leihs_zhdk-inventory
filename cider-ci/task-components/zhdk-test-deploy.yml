@@ -6,11 +6,12 @@ scripts:
     start_when:
       python is pre installed:
         script_key: 'pre-install-python'
-      working tree is unlocked: 
+      working tree is unlocked:
         script_key: 'unlock'
     timeout: 45 Minutes
     body: |
-      set -eux
+      #!/usr/bin/env bash
+      set -euo pipefail
       cd deploy
       export ANSIBLE_HOST_KEY_CHECKING=False
       bin/ansible-playbook db-restore-only_play.yml \

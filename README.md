@@ -1,11 +1,59 @@
-## Examples
+The ZHdK Leihs Inventory for Development, Test and Staging Hosts
+================================================================
 
-Complete deploy to `test` aka `leihs-v4-test.zhdk.ch`, from the `deploy` directory:
+This inventory is included within the leihs source code because deployment to
+the specified hosts and environment is part of the developlentcycle at the ZHdK
+Leihs Team.
 
-    ansible-playbook -v -i ../zhdk-inventory/test-hosts deploy_play.ym
+The inventory for production at the ZHdK can be found here:
+https://github.com/zhdk/leihs-server-inventory
 
 
-Restore production data, you might need to set
-`database_dump_restore_file_path`, see also `./host_vars/test.yml`:
+Deployment
+----------
 
-    ansible-playbook -v -i ../zhdk-inventory/test-hosts db-restore_play.yml
+Our CI has predefined jobs to run a deploy. This is the straight forward and
+transparent way to deploy.
+
+To deploy from localhost:
+
+1. make sure this respository unlocked, see below
+
+2. from the top level leihs repository run something like:
+
+    ./deploy/bin/ansible-playbook deploy_play.yml -i $(pwd)/zhdk-inventory/hosts_dev.yml -l tom
+
+3. relock this respository, see below
+
+
+
+
+
+Secrets Encryption
+------------------
+
+Some secrets are required to deploy to the dev, staging and test environments.
+These are protected via https://github.com/elasticdog/transcrypt.
+
+### Important Commands
+
+To list encrypted files run `git ls-crypt`.
+
+To unlock the encrypted files run ./bin/unlock.
+
+Unlocking is rarely necessary. Some cases include deployments to a ZHdK Server,
+or changing ZHdK Secrets.
+
+Run `./bin/transcrypt --flush-credentials` to bring the files back to their encrypted state.
+
+### Key Rollover
+
+See https://github.com/elasticdog/transcrypt?tab=readme-ov-file#rekeying for key rollover.
+
+We store the symmetric key via gpg in the project. After a rollover:
+
+1. put the unencrypted key in `.transcrypt_key.txt`,
+2. run `./bin/encrypt-transcrypt-key`,
+3. remove `.transcrypt_key.txt`, and
+4. commit.
+

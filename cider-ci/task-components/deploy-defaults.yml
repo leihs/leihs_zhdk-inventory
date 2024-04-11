@@ -29,9 +29,12 @@ context:
       scripts:
         unlock:
           body: |
-            set -euxo
+            #!/usr/bin/env bash
+            set -euo pipefail
             cd ${INVENTORY_DIR}
-            git crypt unlock
+            echo $(pwd)
+            ls -lah ./bin
+            ./bin/unlock
 
         pre-install-ruby:
           exclusive_executor_resource: asdf-ruby
@@ -39,7 +42,7 @@ context:
           body: |
             #!/usr/bin/env bash
             set -euo pipefail
-            cd $DEPLOY_DIR 
+            cd $DEPLOY_DIR
             ./bin/env/ruby-setup
 
         pre-install-nodejs:
@@ -48,7 +51,7 @@ context:
           body: |
             #!/usr/bin/env bash
             set -euo pipefail
-            cd $DEPLOY_DIR 
+            cd $DEPLOY_DIR
             ./bin/env/nodejs-setup
 
         pre-install-python:
@@ -57,7 +60,7 @@ context:
           body: |
             #!/usr/bin/env bash
             set -euo pipefail
-            cd $DEPLOY_DIR 
+            cd $DEPLOY_DIR
             ./bin/env/python-setup
 
         deploy:
