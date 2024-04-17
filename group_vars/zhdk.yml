@@ -1,3 +1,0 @@
-aai_auth_external_base_url: https://aai.leihs.zhdk.ch
-ruby_use_jemalloc: yes
-LEIHS_DEPLOY_NEW_BORROW_APP: yes

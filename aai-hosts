@@ -1,8 +1,0 @@
-[leihs_aai]
-leihs-aai
-
-[zhdk:children]
-leihs_aai
-
-[zhdk_secrets:children]
-leihs_aai

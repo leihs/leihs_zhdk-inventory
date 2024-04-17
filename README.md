@@ -15,16 +15,9 @@ Deployment
 Our CI has predefined jobs to run a deploy. This is the straight forward and
 transparent way to deploy.
 
-To deploy from localhost:
+To deploy from localhost on `tom`:
 
-1. make sure this respository unlocked, see below
-
-2. from the top level leihs repository run something like:
-
-    ./deploy/bin/ansible-playbook deploy_play.yml -i $(pwd)/zhdk-inventory/hosts_dev.yml -l tom
-
-3. relock this respository, see below
-
+    HOST=tom ./bin/deploy
 
 
 

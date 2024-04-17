@@ -1,6 +1,0 @@
-ansible_host: leihs-aai.ruby.zhdk.ch
-ansible_user: root
-
-aai_auth_private_key: '{{auth_system_master_private_key}}'
-aai_auth_public_key: '{{auth_system_master_public_key}}'
-aai_auth_leihs_public_key: '{{auth_system_master_public_key}}'

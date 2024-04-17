@@ -1,9 +1,0 @@
-[leihs_gateway]
-leihs-gw.zhdk.ch
-
-[zhdk:children]
-leihs_gateway
-
-[zhdk_secrets:children]
-leihs_gateway
-

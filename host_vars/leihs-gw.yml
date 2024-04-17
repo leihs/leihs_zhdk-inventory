@@ -1,7 +1,0 @@
-ansible_host: leihs-gw.zhdk.ch
-ansible_user: root
-
-ssh_keys_present: []
-
-ci_vim_mode: yes
-
