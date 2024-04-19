@@ -3,10 +3,10 @@
 set -euo pipefail
 
 INVENTORY_DIR="$(cd -- "$(dirname "${BASH_SOURCE}")" ; cd .. > /dev/null 2>&1 && pwd -P)"
-HOSTS_FILE=${INVENTORY_DIR}/hosts.yml
 LEIHS_DIR=${INVENTORY_DIR}/..
 LEIHS_DEPLOY_DIR=${LEIHS_DIR}/deploy
 
+HOSTS_FILE="${HOSTS_FILE:-${INVENTORY_DIR}/hosts.yml}"
 
 LOCAL_CACHE_DIR_RELATIVE="${LOCAL_CACHE_DIR:-"../tmp/build_cache/"}"
 export LOCAL_CACHE_DIR="$(cd -- "$(dirname "${BASH_SOURCE}")" && mkdir -p "$LOCAL_CACHE_DIR_RELATIVE" && cd "$LOCAL_CACHE_DIR_RELATIVE" && pwd -P)"
