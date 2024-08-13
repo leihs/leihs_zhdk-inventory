@@ -15,7 +15,7 @@ export LOCAL_CACHE_DIR
 
 cd $INVENTORY_DIR
 
-./bin/transcrypt --flush-credentials || true
+./bin/transcrypt --flush-credentials --yes || true
 
 ./bin/unlock
 
@@ -34,6 +34,6 @@ ${LEIHS_DEPLOY_DIR}/bin/ansible-playbook \
 
 cd $INVENTORY_DIR
 
-./bin/transcrypt --flush-credentials
+./bin/transcrypt --flush-credentials --yes
 
 # vi: ft=sh
