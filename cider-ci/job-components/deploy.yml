@@ -62,8 +62,8 @@ context:
             cd $DEPLOY_DIR
             ./bin/env/python-setup
 
-        deploy:
-          timeout: 5 hours
+        pre-build:
+          timeout: 45 Minutes
           start_when:
             unlock_passed:
               script_key: unlock
@@ -74,6 +74,18 @@ context:
               script_key: pre-install-ruby
             nodejs-installed:
               script_key: pre-install-nodejs
+          exclusive_executor_resource: leihs-build
+          body: |
+            #!/usr/bin/env bash
+            set -euo pipefail
+            cd $DEPLOY_DIR
+            ./bin/build
+
+        deploy:
+          timeout: 30 Minutes
+          start_when:
+            pre-build_passed:
+              script_key: pre-build
 
           body: |
             #!/usr/bin/env bash
