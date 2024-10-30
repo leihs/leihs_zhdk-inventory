@@ -14,12 +14,6 @@ jobs:
           DEPLOY_TARGET_INVENTORY: "hosts.yml --limit test"
         include: cider-ci/task-components/restore.yml
 
-    run_when:
-      'on master':
-        type: branch
-        include_match: '^master$'
-
-
   test-deploy:
     name: Deploy to test.ruby.zhdk.ch
     include: cider-ci/job-components/deploy.yml
@@ -29,5 +23,7 @@ jobs:
           zhdk-leihs-test.ruby.zhdk.ch: true
         environment_variables:
           DEPLOY_TARGET_INVENTORY: "hosts.yml --limit test"
-
-
+    run_when:
+      'on master':
+        type: branch
+        include_match: '^master$'
