@@ -12,7 +12,6 @@ scripts:
       cd deploy
       export ANSIBLE_HOST_KEY_CHECKING=False
       bin/ansible-playbook db-restore-only_play.yml \
-        -e "maintenance_page_status_page_url=${STATUS_PAGE_URL:-}" \
         -e 'remote_pgbin_restore_path=/leihs/var/db-backups/latest.pgbin' \
         -i ../zhdk-inventory/${DEPLOY_TARGET_INVENTORY}
 

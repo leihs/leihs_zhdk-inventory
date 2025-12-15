@@ -93,6 +93,5 @@ context:
             cd deploy
             export ANSIBLE_HOST_KEY_CHECKING=False
             bin/ansible-playbook deploy_play.yml \
-              -e "maintenance_page_status_page_url=${STATUS_PAGE_URL:-}" \
               -i ../zhdk-inventory/${DEPLOY_TARGET_INVENTORY}
 
