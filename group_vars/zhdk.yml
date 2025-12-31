@@ -4,7 +4,7 @@ reverse_proxy_use_x_forwarded_for: true
 
 remote_pgbin_restore_path: /leihs/var/db-backups/latest.pgbin
 
-publish_inventory: False
+publish_inventory: True
 
 leihs_virtual_hosts:
 - hostname: '{{leihs_external_hostname}}'
