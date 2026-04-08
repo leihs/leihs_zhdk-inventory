@@ -12,3 +12,7 @@ leihs_virtual_hosts:
   ssl_certificate_file: '/etc/ssl/localcerts/{{ansible_host}}.crt'
   ssl_certificate_key_file: '/etc/ssl/localcerts/{{ansible_host}}.key'
   force_redirect_to_https: yes
+
+
+zhdk_prtg_url: NULL # NULL for deployment to test / staging environment, set in prod hostvar 
+zhdk_zapi_key: '{{zapi_key_dev}}' # set to dev key for deployment to test / staging environment, set to prod key in prod hostvar

@@ -15,13 +15,23 @@ core:
     admin_protected: true
   user-disable-properties:
     account_enabled: false
+    address: NULL
+    city: NULL
+    country: NULL
+    phone: NULL
+    zip: NULL
   user-photo-mode: lazy
   user-update-defaults:
     account_enabled: true
+    address: NULL
     admin_protected: true
+    city: NULL
+    country: NULL
+    phone: NULL
+    zip: NULL
   organization: zhdk.ch
 leihs:
-  base-url: 'http://localhost:{{LEIHS_ADMIN_HTTP_PORT}}'
+  base-url: 'https://{{leihs_external_hostname}}'
   token: '{{prod_v5_api_sync_token}}'
 repl:
   enabled: false
@@ -29,5 +39,5 @@ repl:
   port-file: .nrepl-port
 zapi:
   page-limit: 100
-  token: '{{zapi_key_prod}}'
-prtg-url: '{{prod_v5_sync_prtg_url}}'
+  token: '{{zhdk_zapi_key}}'
+prtg-url: {{zhdk_prtg_url}}
