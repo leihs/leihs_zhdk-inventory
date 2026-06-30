@@ -82,7 +82,7 @@ context:
             ./bin/build
 
         deploy:
-          timeout: 30 Minutes
+          timeout: 60 Minutes
           start_when:
             pre-build_passed:
               script_key: pre-build
