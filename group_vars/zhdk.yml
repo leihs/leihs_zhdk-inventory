@@ -6,6 +6,9 @@ remote_pgbin_restore_path: /leihs/var/db-backups/latest.pgbin
 
 publish_inventory: True
 
+# show "new inventory" button in legacy manage topbar (deploy default is false)
+legacy_show_new_inventory_button: true
+
 leihs_virtual_hosts:
 - hostname: '{{leihs_external_hostname}}'
   ip: '*'
