@@ -6,6 +6,8 @@ remote_pgbin_restore_path: /leihs/var/db-backups/latest.pgbin
 
 publish_inventory: True
 
+publish_lending: False
+
 leihs_virtual_hosts:
 - hostname: '{{leihs_external_hostname}}'
   ip: '*'
