@@ -15,7 +15,7 @@ context:
           include_match: ^.*$
 
       traits:
-        asdf: true
+        mise: true
         zhdk-leihs-deploy: true
 
       max_trials: 1
