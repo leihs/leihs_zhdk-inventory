@@ -12,7 +12,7 @@ else
   gpg -a --encrypt \
       -r Thomas.Schank@zhdk.ch \
       -r ci-exec-user@ci-executor-leihs \
-      -r jan.pistor@zhdk.ch \
+      -r cider-ci@ci-executor-v6-leihs.ruby.zhdk.ch \
       -r manuel.radl@zhdk.ch \
       -r matus.kmit@zhdk.ch \
       -r urs.vanbinsbergen@zhdk.ch \
