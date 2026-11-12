@@ -80,6 +80,13 @@ jobs:
       'on tom/dev':
         type: branch
         include_match: '^tom\/dev'
+      # temporary: exercises the cron trigger of the v6 CI (UTC, rerun
+      # replaces the finished job every hour)
+      'every hour on tom/wip':
+        type: cron
+        value: '0 * * * *'
+        branch_include_match: '^tom\/wip$'
+        rerun: true
 
   ### UVB ######################################################################
 
